@@ -7,9 +7,9 @@ class ReviewSerializer(serializers.ModelSerializer):
         model = Review
         fields = '__all__'
 
-class ReviewListingField(serializers.RelatedField):
-    def to_representation(self, value):
-        return {'text': value.text, 'mark': value.mark}
+class ReviewListingField(serializers.Serializer):
+    title = serializers.CharField()
+    price = serializers.DecimalField(max_digits=10, decimal_places=2)
 
 class ProductListSerializer(serializers.ModelSerializer):
     # реализуйте поля title и price

@@ -21,17 +21,17 @@ Content-Type: application/json
 ###
 
 # получение одной книги
-GET {{baseUrl}}/books/1/
+GET {{baseUrl}}/books/2/
 Content-Type: application/json
 
 ###
 
 # обновление книги
-PATCH {{baseUrl}}/books/update/1/
+PATCH {{baseUrl}}/books/update/2/
 Content-Type: application/json
 
 {
-  "year": 1842
+  "year": 1842,
 }
 
 ###
@@ -48,8 +48,8 @@ Content-Type: application/json
 
 {
   "user_name": "Иван Петров",
-  "days_count": 2,
-  "books": [1, 2]
+  "days_count": 3,
+  "books": [3, 2]
 }
 
 ###
@@ -61,7 +61,7 @@ Content-Type: application/json
 ###
 
 # получение одного заказа
-GET {{baseUrl}}/orders/1/
+GET {{baseUrl}}/orders/2/
 Content-Type: application/json
 
 ###

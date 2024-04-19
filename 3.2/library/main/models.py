@@ -7,7 +7,7 @@ class Book(models.Model):
     year = models.PositiveSmallIntegerField(verbose_name='Год публикации')
 
     def __str__(self):
-        return f'{self.author} - {self.title}'
+        return f'{self.author} - {self.title} - {self.year}'
 
 
 class Order(models.Model):
@@ -15,4 +15,7 @@ class Order(models.Model):
     days_count = models.PositiveSmallIntegerField(default=1, verbose_name='Количество дней заказа')
     date = models.DateField(auto_now_add=True, verbose_name='Дата')
     books = models.ManyToManyField(Book)
+
+    def __str__(self):
+        return f'{self.user_name} - {self.days_count} - {self.date} - {self.books}'
 
