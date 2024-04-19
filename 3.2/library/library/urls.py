@@ -34,4 +34,4 @@ urlpatterns = [
     path('api/v1/books/update/<int:pk>/', BookUpdateView.as_view()),
     path('api/v1/books/delete/<int:pk>/', BookDeleteView.as_view()),
     path("api/v1/", include(router.urls))
-]
+] + router.urls
