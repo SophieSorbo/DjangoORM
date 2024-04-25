@@ -11,10 +11,10 @@ class BookSerializer(serializers.ModelSerializer):
 
 
     #доп задание
-    # def to_representation(self, instance):
-    #     representation = super().to_representation(instance)
-    #     representation['orders_count'] = instance.orders.count()
-    #     return representation
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        representation['orders_count'] = instance.order_set.count()
+        return representation
 
 
 class OrderSerializer(serializers.ModelSerializer):

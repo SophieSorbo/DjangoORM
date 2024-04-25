@@ -27,7 +27,7 @@ Content-Type: application/json
 ###
 
 # обновление книги
-PATCH {{baseUrl}}/books/update/2/
+PATCH {{baseUrl}}/books/update/37/
 Content-Type: application/json
 
 {
@@ -37,7 +37,7 @@ Content-Type: application/json
 ###
 
 # удаление книги
-DELETE {{baseUrl}}/books/delete/1/
+DELETE {{baseUrl}}/books/delete/2/
 Content-Type: application/json
 
 ###
@@ -49,7 +49,7 @@ Content-Type: application/json
 {
   "user_name": "Иван Петров",
   "days_count": 3,
-  "books": [3, 2]
+  "books": [3, 4]
 }
 
 ###
@@ -67,7 +67,7 @@ Content-Type: application/json
 ###
 
 # обновление книги
-PATCH {{baseUrl}}/orders/1/
+PATCH {{baseUrl}}/orders/3/
 Content-Type: application/json
 
 {
